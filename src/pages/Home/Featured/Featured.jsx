@@ -4,7 +4,7 @@ import "./Featured.css";
 
 const Featured = () => {
   return (
-    <div className="featured-item text-white pt-8 my-20">
+    <div className="featured-item text-white pt-8 my-20 bg-fixed">
       <SectionTitle
         heading={"Featured Item"}
         subHeading={"Check it out"}
@@ -23,7 +23,7 @@ const Featured = () => {
             odio fugit ea itaque doloremque nulla nesciunt ullam facere. Labore
             eaque sint, vero fuga perspiciatis porro cupiditate libero ab magni!
           </p>
-          <button className="btn btn-outline">Order Now</button>
+          <button className="btn btn-outline border-0 border-b-4 mt-4">Order Now</button>
         </div>
       </div>
     </div>
