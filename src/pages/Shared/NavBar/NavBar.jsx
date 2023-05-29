@@ -20,7 +20,10 @@ const NavBar = () => {
         <Link to="secret">Secret</Link>
         {user ? (
           <>
-            <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
+            <span>{user?.displayName}</span>
+            <button onClick={handleLogOut} className="btn btn-ghost">
+              Log Out
+            </button>
           </>
         ) : (
           <>
