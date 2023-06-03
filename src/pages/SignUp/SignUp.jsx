@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/Authprovider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const SignUp = () => {
   const {
@@ -22,7 +23,7 @@ const SignUp = () => {
       console.log(loggedUser);
       updateUserProfile(data.name, data.PhotoURL)
         .then(() => {
-          const saveUser = {name: data.name, email:data.email}
+          const saveUser = { name: data.name, email: data.email };
           fetch("http://localhost:5000/users", {
             method: "POST",
             headers: {
@@ -159,9 +160,12 @@ const SignUp = () => {
                 />
               </div>
             </form>
-            <small>
-              New Here? <Link to="/login">Create an account</Link>
-            </small>
+            <p>
+              <small>
+                Already have an account <Link to="/login">Login</Link>
+              </small>
+            </p>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>
