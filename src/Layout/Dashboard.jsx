@@ -1,12 +1,15 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { FaShoppingCart, FaWallet, FaCalendar, FaHome, FaUtensils, FaBook, FaUsers } from "react-icons/fa";
 import useCart from "../hooks/useCart";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
   const [cart] = useCart();
 
   // TODO: load data from the server
-  const isAdmin = true;
+  // const isAdmin = true;
+  // ? it didn't work. Why?
+  const [isAdmin] = useAdmin();
 
   return (
     <div className="drawer drawer-mobile">
