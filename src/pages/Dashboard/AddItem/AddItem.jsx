@@ -51,8 +51,8 @@ const AddItem = () => {
   return (
     <div className="w-full px-10">
       <SectionTitle
-        subHeading="What's new"
-        heading="Add an item"
+        heading="What's new"
+        subHeading="Add an item"
       ></SectionTitle>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control w-full mb-4">
